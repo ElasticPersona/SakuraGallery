@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//Polaroidコントローラをルートで登録
+Route::get('/polaroid', 'PolaroidController@index');
+
 Route::get('/sakura', function() {
     $data = Twitter::query('search/tweets', 'GET', array(
 	//'q' => "LinQ100面相 from:@araki_sakura filter:images", 
