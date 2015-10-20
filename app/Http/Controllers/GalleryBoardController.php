@@ -45,15 +45,15 @@ class GalleryBoardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $twitterId
+     * @param  str  $accountId
      * @return Response
      */
-    public function show($twitterId)
+    public function show($accountId)
     {
 
         // ツイート検索パラメータの設定、「q」は検索文字列、「count」は取得件数（最大100件）
         $params = array(
-            'q' => 'from:'.$twitterId.' filter:images',
+            'q' => 'from:'.$accountId.' filter:images',
             'lang' => 'ja',
             'locale' => 'ja',
             //'result_type' => 'popular',
@@ -63,39 +63,39 @@ class GalleryBoardController extends Controller
         );
 
         // リクエスト回数
-        $request_number = 10;
+        $requestNumber = 10;
 
-        $tweet_texts = array();
-        $tweet_images = array();
+        $tweetTexts = array();
+        $tweetImages = array();
 
-        for ($i = 0; $i < $request_number; $i++) {
+        for ($i = 0; $i < $requestNumber; $i++) {
 
             // ツイート検索実行
             //echo $params['count'] * $i + 1 . " - " . $params['count'] * ($i + 1) . " 件目取得中\n";
-            $tweets_obj = Twitter::query('search/tweets', 'GET', $params);
+            $tweetsObj = Twitter::query('search/tweets', 'GET', $params);
 
             // オブジェクトを配列に変換
-            $tweets_arr = json_decode($tweets_obj, true);
+            $tweetsArray = json_decode($tweetsObj, true);
 
             // ツイート本文を抽出
-            for ($j = 0; $j < count($tweets_arr['statuses']); $j++) {
-                $tweet_texts[] = $tweets_arr['statuses'][$j]['text'];
-                $tweet_images[] = $tweets_arr['statuses'][$j]['entities']['media'][0]['media_url_https'];
+            for ($j = 0; $j < count($tweetsArray['statuses']); $j++) {
+                $tweetTexts[] = $tweetsArray['statuses'][$j]['text'];
+                $tweetImages[] = $tweetsArray['statuses'][$j]['entities']['media'][0]['media_url_https'];
             }
 
             // next_results が無ければ処理を終了
-            if (!isset($tweets_arr['search_metadata']['next_results'])) {
+            if (!isset($tweetsArray['search_metadata']['next_results'])) {
                 break;
             } else {
                 // 先頭の「?」を除去
-                $next_results = preg_replace('/^\?/', '', $tweets_arr['search_metadata']['next_results']);
+                $nextResults = preg_replace('/^\?/', '', $tweetsArray['search_metadata']['next_results']);
 
                 // パラメータに変換
-                parse_str($next_results, $params);
+                parse_str($nextResults, $params);
             }
         }
 
-        return view('index')->with('tweets', $tweet_images);
+        return view('index')->with('tweets', $tweetImages);
     }
 
     /**

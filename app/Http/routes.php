@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 // Polaroidコントローラをルートで登録
-Route::get('/polaroid', 'PolaroidController@index');
+Route::get('/polaroid/{accountId}', 'PolaroidController@show');
 
 // パラメータでTwitterIDを受け取り壁紙ギャラリー表示
-Route::get('/board/{twitterId}', 'GalleryBoardController@show');
+Route::get('/board/{accountId}', 'GalleryBoardController@show');
