@@ -40,12 +40,10 @@ class PolaroidController extends Controller
         ];
 
         // リクエスト回数
-        $requestNumber = 10;
-
-        $tweetTexts = array();
-        $tweetImages = array();
+        $requestNumber = 1;
 
         // 指定ユーザのTwitterツイート画像とテキストを配列へ格納
+        $tweetItems = array();
         for ($i = 0; $i < $requestNumber; $i++) {
 
             // ツイート検索実行
@@ -55,10 +53,29 @@ class PolaroidController extends Controller
             // オブジェクトを配列に変換
             $tweetsArray = json_decode($tweetsObj, true);
 
-            // ツイート本文を抽出
+            // ツイート本文から画像を抽出
             for ($j = 0; $j < count($tweetsArray['statuses']); $j++) {
-                $tweetTexts[] = $tweetsArray['statuses'][$j]['text'];
-                $tweetImages[] = $tweetsArray['statuses'][$j]['entities']['media'][0]['media_url_https'];
+                $tweetId = $tweetsArray['statuses'][$j]['id'];
+                $tweetDatail = Twitter::query('statuses/show', 'GET', array('id' => $tweetId));
+                $tweetDatail = json_decode(json_encode($tweetDatail), true);
+                // ひとつのツイートの中に複数画像が添付されている場合
+                // entities → extended_entities となるためそこから取り出さなければならない
+                if (is_array($tweetDatail['extended_entities'])) {
+                    foreach ($tweetDatail['extended_entities']['media'] as $key => $media) {
+                        if (isset($tweetDatail['extended_entities']['media'][$key])) {
+                            $tweetItems[] = array(
+                                'text' => $tweetsArray['statuses'][$j]['text'],
+                                'image' => $tweetDatail['extended_entities']['media'][$key]['media_url_https']
+                            );
+                        }
+                    }
+                // ひとつのツイートに画像添付が1枚の時の場合
+                } else {
+                    $tweetItems[] = array(
+                        'text' => $tweetsArray['statuses'][$j]['text'],
+                        'image' => $tweetsArray['statuses'][$j]['entities']['media'][0]['media_url_https']
+                    );
+                }
             }
 
             // next_results が無ければ処理を終了
@@ -89,6 +106,6 @@ class PolaroidController extends Controller
             $instagramTexts[] = $data->caption->text;
         }
 
-        return view('polaroid', compact('userInfo', 'tweetTexts', 'tweetImages', 'instagramImages', 'instagramTexts'));
+        return view('polaroid', compact('userInfo', 'tweetItems', 'instagramImages', 'instagramTexts'));
     }
 }
