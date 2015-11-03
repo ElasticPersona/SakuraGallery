@@ -6,10 +6,11 @@
     <meta name="description" content="Sakura Araki Happy 19th Birthday." />
     <meta name="keywords" content="Sakura Araki, Sakura, Araki, LinQ, 新木さくら, さくら, 新木" />
     <meta name="author" content="Shuhei" />
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/polaroid-component.css" />
     <link rel="stylesheet" type="text/css" href="/css/polaroid-demo.css" />
     <link rel="stylesheet" type="text/css" href="/css/polaroid-normalize.css" />
+
     <!-- フォント -->
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 
@@ -24,6 +25,24 @@
     <script type="text/javascript" src="/js/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="/js/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="/js/demo.js"></script>
+    <script type="text/javascript" src="/js/soundmanager2-jsmin.js"></script>
+
+<script>
+    <!-- 音楽再生 -->
+    soundManager.setup({
+        // url: '/path/to/swf-files/',
+        onready: function() {
+            var mySound = soundManager.createSound({
+                id: 'aSound',
+                url: '../mp3/LinQ-telephone.mp3'
+            });
+            mySound.play();
+        },
+        ontimeout: function() {
+            // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+        }
+    });
+</script>
 <style type="text/css">
 .polaroidImage {
     max-height: 240px;
@@ -280,7 +299,9 @@ h1, .textMessage {
                     <?php $index = 0 ?>
                     @foreach ($instagramImages as $image)
                     <figure>
-                        <a href="{{ $image }}" class="photostack-img"><img class="polaroidImage" src="{{ $image }}" alt=""/></a>
+                        <a href="{{ $image }}" class="photostack-img">
+                            <img class="polaroidImage" src="{{ $image }}" alt=""/>
+                        </a>
                         <figcaption>
                             <h2 class="photostack-title"></h2>
                             <div class="photostack-back">
@@ -315,17 +336,6 @@ h1, .textMessage {
                     @endforeach
                 </div>
             </section>
-            </section>
-
-
-            <section class="description">
-                <p>
-                    <a href="">
-
-                    </a>
-                    <a href="">
-                    </a>
-                </p>
             </section>
 
             <section class="related">
@@ -363,6 +373,7 @@ h1, .textMessage {
             //console.log(item)
         }
     } );
+
 
     // お誕生日おめでとうエフェクト
     // wrap each title letter
@@ -484,6 +495,6 @@ h1, .textMessage {
     })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)
-        .addIndicators() // add indicators (requires plugin)
+    //    .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 </script>
