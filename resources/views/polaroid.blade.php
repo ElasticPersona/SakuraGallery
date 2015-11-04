@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/css/polaroid-component.css" />
     <link rel="stylesheet" type="text/css" href="/css/polaroid-demo.css" />
     <link rel="stylesheet" type="text/css" href="/css/polaroid-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
 
     <!-- フォント -->
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -26,21 +27,80 @@
     <script type="text/javascript" src="/js/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="/js/demo.js"></script>
     <script type="text/javascript" src="/js/soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="/js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="/js/jquery.lettering.js"></script>
+
 
 <script>
     <!-- 音楽再生 -->
     soundManager.setup({
-        // url: '/path/to/swf-files/',
         onready: function() {
             var mySound = soundManager.createSound({
                 id: 'aSound',
-                url: '../mp3/LinQ-telephone.mp3'
+                url: '../mp3/LinQ-telephone.mp3',
+                loops: 1,
             });
             mySound.play();
         },
         ontimeout: function() {
             // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
         }
+    });
+    $(function() {
+        $('.tlt').textillate({
+            // the default selector to use when detecting multiple texts to animate
+            selector: '.texts',
+
+            // enable looping
+            loop: true,
+
+            // sets the minimum display time for each text before it is replaced
+            minDisplayTime: 2000,
+
+            // sets the initial delay before starting the animation
+            // (note that depending on the in effect you may need to manually apply
+            // visibility: hidden to the element before running this plugin)
+            initialDelay: 0,
+
+            // set whether or not to automatically start animating
+            autoStart: true,
+
+            // custom set of 'in' effects. This effects whether or not the
+            // character is shown/hidden before or after an animation
+            inEffects: [],
+
+            // custom set of 'out' effects
+            outEffects: [ 'hinge' ],
+
+            // in animation settings
+            in: {
+                // set the effect name
+                effect: 'fadeInLeftBig',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+                callback: function () {}
+            },
+
+            // out animation settings.
+            out: {
+                effect: 'fadeOutRight',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+                callback: function () {}
+            },
+
+            // callback that executes once textillate has finished
+            callback: function () {},
+
+            // set the type of token to animate (available types: 'char' and 'word')
+            type: 'char'
+        });
     });
 </script>
 <style type="text/css">
@@ -102,7 +162,7 @@ h1, .textMessage {
     <header class="codrops-header headerImage">
         <svg xmlns="http://www.w3.org/2000/svg" width="1000px" height="300px" class="polaroid" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 300">
         </svg>
-        <h1>Happy 19th birthday, sakura ♬
+        <h1 class="tlt">Happy 19th birthday, sakura ♬
             <span>
             </span>
         </h1>
