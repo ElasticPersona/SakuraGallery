@@ -1,0 +1,95 @@
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+    font-size: 2em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+    padding:0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+    overflow: hidden;
+}
+
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    background-image: /* our video */;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+}
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 43%;
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0{
+    overflow: hidden;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+    color: #fff;
+}
+
+
+.polaroidImage {
+    max-height: 240px;
+    max-width: 240px;
+    margin: auto;
+}
+.sakuraSmile {
+    background-image: url("../img/sakuraSmile.png");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.corridor {
+    background-image: url("../img/sakuraCorridor.png");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.pinkCross {
+    background-image: url("../img/pinkCross.png");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+/* テキストハイライト */
+.lightPink {
+    font-family: 'Playball', cursive;
+    text-shadow:
+            0 0 25px pink,
+            0 0 20px pink,
+            0 0 0.40px pink;
+}
+/* Polaroid裏面テキスト */
+.polaroidText {
+    font-size: 6px;
+}

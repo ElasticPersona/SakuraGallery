@@ -21,3 +21,8 @@ Route::get('/polaroid/{accountId}', 'PolaroidController@show');
 
 // パラメータでTwitterIDを受け取り壁紙ギャラリー表示
 Route::get('/board/{accountId}', 'GalleryBoardController@show');
+
+// LinQ - Telephone の曲再生歌詞表示
+Route::get('/sakura/telephone', function() {
+    return view('telephone');
+});

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Mockery\CountValidator\Exception;
 use Thujohn\Twitter\Facades\Twitter as Twitter;
 use Vinkla\Instagram\Facades\Instagram as Instagram;
 
@@ -62,7 +63,7 @@ class PolaroidController extends Controller
                 // entities → extended_entities となるためそこから取り出さなければならない
                 if (is_array($tweetDatail['extended_entities'])) {
                     foreach ($tweetDatail['extended_entities']['media'] as $key => $media) {
-                        if (isset($tweetDatail['extended_entities']['media'][$key])) {
+                        if (isset($tweetDatail['extended_entities']['media'][$key]) && count($tweetItems) <= 10) {
                             $tweetItems[] = array(
                                 'text' => $tweetsArray['statuses'][$j]['text'],
                                 'image' => $tweetDatail['extended_entities']['media'][$key]['media_url_https']
@@ -106,6 +107,6 @@ class PolaroidController extends Controller
             $instagramTexts[] = $data->caption->text;
         }
 
-        return view('polaroid', compact('userInfo', 'tweetItems', 'instagramImages', 'instagramTexts'));
+        return view('sakura', compact('userInfo', 'tweetItems', 'instagramImages', 'instagramTexts'));
     }
 }
