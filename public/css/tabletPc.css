@@ -14,7 +14,7 @@ h1{
     text-align:center;
     overflow: hidden;
 }
-
+/*
 #myVideo{
     position: absolute;
     right: 0;
@@ -31,7 +31,7 @@ h1{
     object-fit: cover; /*cover video background */
     z-index:3;
 }
-
+*/
 /* Layer with position absolute in order to have it over the video
 * --------------------------------------- */
 #section0 .layer{
@@ -60,15 +60,29 @@ h1{
     max-width: 240px;
     margin: auto;
 }
-.sakuraSmile {
-    background-image: url("../img/sakuraSmile.png");
+.sakuraFirst {
+    background-image: url("../img/sakuraWater.jpg");
     -moz-background-size: cover;
     background-size: cover;
     height: 100%;
     width: 100%;
 }
-.corridor {
-    background-image: url("../img/sakuraCorridor.png");
+.sakuraSecond {
+    background-image: url("../img/sakuraSmile.jpg");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.sakuraThird {
+    background-image: url("../img/sakuraCorridor.jpg");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.sakuraFourth {
+    background-image: url("../img/sakuraWink.jpg");
     -moz-background-size: cover;
     background-size: cover;
     height: 100%;

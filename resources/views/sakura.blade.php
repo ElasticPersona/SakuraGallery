@@ -3,6 +3,8 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>{{ $userInfo['name'] }} Gallery</title>
 <meta name="description" content="Sakura Araki Happy 19th Birthday." />
 <meta name="keywords" content="Sakura Araki, Sakura, Araki, LinQ, 新木さくら, さくら, 新木" />
@@ -51,14 +53,27 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#fullpage').fullpage({
-                verticalCentered: true,
-                sectionsColor: ['#ffd1ff', '#e8d1ff', '#ffd1ff', '#e8d1ff'],
-                afterRender: function(){
-                    //playing the video
-                    $('video').get(0).play();
-                }
-            });
+            // 画面幅を取得
+            var screenWidth = $(window).width();
+            // 分岐する画面幅
+            var xWidth = 911;
+            if (xWidth <= screenWidth) {
+                $('video').show();
+                $('#fullpage').fullpage({
+                    verticalCentered: true,
+                    sectionsColor: ['#ffd1ff', '#e8d1ff', '#ffd1ff', '#e8d1ff'],
+                    afterRender: function () {
+                        //playing the video
+                        $('video').get(0).play();
+                    }
+                });
+            } else {
+                $('video').hide();
+                $('#fullpage').fullpage({
+                    verticalCentered: true,
+                    sectionsColor: ['#ffd1ff', '#e8d1ff', '#ffd1ff', '#e8d1ff'],
+                });
+            }
 
             $('.tlt').textillate({
                 // the default selector to use when detecting multiple texts to animate
@@ -121,8 +136,8 @@
 <body>
 
 <div id="fullpage">
-    <div class="section " id="section0">
-        <video autoplay loop muted id="myVideo">
+    <div class="section sakuraFirst" id="section0">
+        <video autoplay loop muted id="myVideo" style="visibility:hidden">
             <source src="../movies/sakuraHappyWedding.mp4" type="video/mp4">
         </video>
         <div class="layer">
@@ -131,13 +146,13 @@
     </div>
     <div class="section" id="section1">
         <div class="slide" id="slide1">
-            <div class="sakuraSmile"></div>
+            <div class="sakuraSecond"></div>
         </div>
         <div class="slide" id="slide2">
             <h1 class="lightPink">Special SakuraDays</h1>
             <section id="photostack-1" class="photostack">
                 <div>
-                    <?php for($i=0; $i <= 20; $i++) {
+                    <?php for($i=1; $i <= 16; $i++) {
                         if ($i < 10) { $i = '0'.$i; } ?>
                         <figure>
                             <a class="photostack-img">
@@ -194,25 +209,23 @@
             </section>
         </div>
     </div>
-    <div class="section corridor" id="section2">
+    <div class="section sakuraThird" id="section2">
         <a href="/sakura/telephone">
             <h1 class="tlt">Listen to Telephone</h1>
         </a>
     </div>
-    <div class="section" id="section3">
-        <div class="pinkCross">
-            <section class="related pinkCross">
-                <h3>Official Sites</h3>
-                <a href="http://ameblo.jp/loveinq/">
-                    <img src="" />
-                    <h3>LinQ Blogs</h3>
-                </a>
-                <a href="http://ameblo.jp/sakura-araki/">
-                    <img src="" />
-                    <h3>Sakura Official Blogs</h3>
-                </a>
-            </section>
-        </div>
+    <div class="section sakuraFourth" id="section3">
+        <section class="related">
+            <h3>Official Sites</h3>
+            <a href="http://ameblo.jp/loveinq/">
+                <img src="" />
+                <h3>LinQ Blogs</h3>
+            </a>
+            <a href="http://ameblo.jp/sakura-araki/">
+                <img src="" />
+                <h3>Sakura Official Blogs</h3>
+            </a>
+        </section>
     </div>
 </div>
 

@@ -60,15 +60,22 @@ h1{
     max-width: 240px;
     margin: auto;
 }
-.sakuraSmile {
+.sakuraSecond {
     background-image: url("../img/sakuraSmile.png");
     -moz-background-size: cover;
     background-size: cover;
     height: 100%;
     width: 100%;
 }
-.corridor {
+.sakuraThird {
     background-image: url("../img/sakuraCorridor.png");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.sakuraFourth {
+    background-image: url("../img/sakuraWink.jpg");
     -moz-background-size: cover;
     background-size: cover;
     height: 100%;
