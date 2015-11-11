@@ -216,7 +216,7 @@
     </div>
     <div class="section sakuraThird" id="section2">
         <a href="/sakura/telephone">
-            <h1 class="tlt">Listen to Telephone</h1>
+            <h1 class="lightPink tlt">Listen to Telephone</h1>
         </a>
     </div>
     <div class="section sakuraFourth" id="section3">
