@@ -61,7 +61,7 @@
                 $('video').show();
                 $('#fullpage').fullpage({
                     verticalCentered: true,
-                    sectionsColor: ['#ffd1ff', '#e8d1ff', '#ffd1ff', '#e8d1ff'],
+                    sectionsColor: ['white', 'white', '', ''],
                     afterRender: function () {
                         //playing the video
                         $('video').get(0).play();
@@ -71,7 +71,7 @@
                 $('video').hide();
                 $('#fullpage').fullpage({
                     verticalCentered: true,
-                    sectionsColor: ['#ffd1ff', '#e8d1ff', '#ffd1ff', '#e8d1ff'],
+                    sectionsColor: ['white', 'white', '', ''],
                 });
             }
 
@@ -132,6 +132,12 @@
         });
     </script>
 
+    <style>
+        #slide2, #slide3, #slide4 {
+            background-color: hotpink;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -152,14 +158,13 @@
             <h1 class="lightPink">Special SakuraDays</h1>
             <section id="photostack-1" class="photostack">
                 <div>
-                    <?php for($i=1; $i <= 16; $i++) {
-                        if ($i < 10) { $i = '0'.$i; } ?>
+                    <?php for($i = 1; $i <= 8; $i++) {?>
                         <figure>
                             <a class="photostack-img">
-                                <img class="polaroidImage" src="../img/<?php echo $i ?>.jpg" alt="img01"/>
+                                <img class="polaroidImage" src="../img/0<?php echo $i ?>.jpg" alt=""/>
                             </a>
                             <figcaption>
-                                <h2 class="photostack-title">Serenity Beach</h2>
+                                <h2 class="photostack-title">SakuraDays<?php echo $i ?></h2>
                             </figcaption>
                         </figure>
                     <?php } ?>

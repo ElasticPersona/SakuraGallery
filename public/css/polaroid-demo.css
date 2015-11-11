@@ -182,23 +182,22 @@ svg.polaroid rect {
 	font-size: 1.35em;
 	padding: 6em 2em;
 	overflow: hidden;
-	background-color: #ffd1ff;
 }
 
 .related > a {
-	border: 3px solid #3c3c3c;
+	border: 3px solid #e8d1ff;
 	display: inline-block;
 	text-align: center;
 	margin: 20px 10px;
 	padding: 25px;
-	color: #3c3c3c;
+	color: pink;
 	-webkit-transition: color 0.3s, border-color 0.3s;
 	transition: color 0.3s, border-color 0.3s;
 }
 
 .related a:hover {
-	color: #beb4b7;
-	border-color: #beb4b7;
+	color: pink;
+	border-color: pink;
 }
 
 .related a img {

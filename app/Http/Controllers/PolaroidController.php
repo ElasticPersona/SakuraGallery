@@ -63,7 +63,7 @@ class PolaroidController extends Controller
                 // entities → extended_entities となるためそこから取り出さなければならない
                 if (is_array($tweetDatail['extended_entities'])) {
                     foreach ($tweetDatail['extended_entities']['media'] as $key => $media) {
-                        if (isset($tweetDatail['extended_entities']['media'][$key]) && count($tweetItems) <= 10) {
+                        if (isset($tweetDatail['extended_entities']['media'][$key]) && count($tweetItems) <= 8) {
                             $tweetItems[] = array(
                                 'text' => $tweetsArray['statuses'][$j]['text'],
                                 'image' => $tweetDatail['extended_entities']['media'][$key]['media_url_https']
@@ -97,7 +97,7 @@ class PolaroidController extends Controller
             $instagramUserId = $data->id;
         }
 
-        $limit = 10;
+        $limit = 8;
         $instagramImages = array();
 
         // 指定ユーザのInstagram 画像とテキストを配列へ格納
