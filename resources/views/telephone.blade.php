@@ -14,30 +14,17 @@
 <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="/js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="/js/audiojs/audio.min.js"></script>
 <script type="text/javascript" src="/js/scrollocue.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $('.scrollocueView').scrollocue();
     });
-    <!-- 音楽再生 -->
-    soundManager.setup({
-        onready: function() {
-            var mySound = soundManager.createSound({
-                id: 'aSound',
-                url: '../mp3/LinQ-telephone.mp3',
-                loops: 1,
-            });
-            mySound.play();
-        },
-        ontimeout: function() {
-            // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
-        }
-    });
 </script>
 </head>
 
 <body>
+<audio src="/mp3/LinQ-telephone.mp3" autoplay loop></audio>
 
 <div id="container" class="scrollocueView">
 
