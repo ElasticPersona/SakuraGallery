@@ -27,10 +27,10 @@
       <file leaf-file-name="sakura.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/sakura.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63414633">
-              <caret line="223" column="11" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.5884146">
+              <caret line="221" column="11" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="11" />
               <folding>
-                <marker date="1447426199000" expanded="true" signature="2520:2580" placeholder="..." />
+                <marker date="1447426912000" expanded="true" signature="2520:2580" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -795,12 +795,12 @@
       <workItem from="1445713113294" duration="1341000" />
       <workItem from="1445715532285" duration="12345000" />
       <workItem from="1446370374441" duration="519000" />
-      <workItem from="1446370936469" duration="73871000" />
+      <workItem from="1446370936469" duration="74484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100136000" />
+    <option name="totallyTimeSpent" value="100749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="6" />
@@ -1230,10 +1230,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/sakura.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63414633">
-          <caret line="223" column="11" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5884146">
+          <caret line="221" column="11" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="11" />
           <folding>
-            <marker date="1447426199000" expanded="true" signature="2520:2580" placeholder="..." />
+            <marker date="1447426912000" expanded="true" signature="2520:2580" placeholder="..." />
           </folding>
         </state>
       </provider>

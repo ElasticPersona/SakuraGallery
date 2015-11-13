@@ -219,9 +219,9 @@
         </a>
     </div>
     <div class="section sakuraFourth" id="section3">
-        <h2 class="tlt lightPink">This is SAKURA day!</h2>
-        <h2 class="tlt lightPink">Have fun with Me!</h2>
-        <h3 class="tlt lightPink">Shuhei.</h3>
+        <h1 class="tlt lightPink">This is SAKURA day!</h1>
+        <h1 class="tlt lightPink">Have fun with Me!</h1>
+        <h2 class="tlt lightPink">Shuhei.</h2>
     </div>
 </div>
 
