@@ -219,21 +219,9 @@
         </a>
     </div>
     <div class="section sakuraFourth" id="section3">
-        <section class="related">
-            <h3>Official Sites</h3>
-            <a href="http://ameblo.jp/loveinq/">
-                <img src="" />
-                <h3>LinQ Blogs</h3>
-            </a>
-            <a href="http://ameblo.jp/sakura-araki/">
-                <img src="" />
-                <h3>Sakura Official Blogs</h3>
-            </a>
-            <p></p>
-            <h3 class="tlt lightPink">This is SAKURA day!</h3>
-            <h3 class="tlt lightPink">Have fun with Me!</h3>
-            <h4 class="tlt lightPink">Shuhei.</h4>
-        </section>
+        <h2 class="tlt lightPink">This is SAKURA day!</h2>
+        <h2 class="tlt lightPink">Have fun with Me!</h2>
+        <h3 class="tlt lightPink">Shuhei.</h3>
     </div>
 </div>
 
