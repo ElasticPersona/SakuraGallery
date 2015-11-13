@@ -60,6 +60,13 @@ h1{
     max-width: 240px;
     margin: auto;
 }
+.sakuraFirst {
+    background-image: url("../img/birthdayCake.png");
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
 .sakuraSecond {
     background-image: url("../img/sakuraSmile.png");
     -moz-background-size: cover;

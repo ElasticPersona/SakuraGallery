@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa9d232-ac1a-4e0a-8b56-f47a1c8c402c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/smartPhone.css" afterPath="$PROJECT_DIR$/public/css/smartPhone.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/tabletPc.css" afterPath="$PROJECT_DIR$/public/css/tabletPc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/desktopPc.css" afterPath="$PROJECT_DIR$/public/css/desktopPc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/sakura.blade.php" afterPath="$PROJECT_DIR$/resources/views/sakura.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/telephone.blade.php" afterPath="$PROJECT_DIR$/resources/views/telephone.blade.php" />
     </list>
     <ignored path="sakuraGallery.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,23 +25,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sakura.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sakura.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/sakura.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="147" column="47" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.5152439">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding>
-                <marker date="1447421360000" expanded="true" signature="2521:2581" placeholder="..." />
+                <marker date="1447425679000" expanded="true" signature="2520:2580" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telephone.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="telephone.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/telephone.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39531478">
-              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smartPhone.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/smartPhone.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.458334">
+              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tabletPc.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/tabletPc.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.75">
+              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="desktopPc.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/desktopPc.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -82,12 +109,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PolaroidController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/sakuraController.php" />
-        <option value="$PROJECT_DIR$/public/css/desktopPc.css" />
         <option value="$PROJECT_DIR$/public/css/smartPhone.css" />
         <option value="$PROJECT_DIR$/public/css/tabletPc.css" />
-        <option value="$PROJECT_DIR$/resources/views/sakura.blade.php" />
         <option value="$PROJECT_DIR$/public/js/jplayer/jquery.jplayer.min.js" />
         <option value="$PROJECT_DIR$/resources/views/telephone.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/desktopPc.css" />
+        <option value="$PROJECT_DIR$/resources/views/sakura.blade.php" />
       </list>
     </option>
   </component>
@@ -769,12 +796,12 @@
       <workItem from="1445713113294" duration="1341000" />
       <workItem from="1445715532285" duration="12345000" />
       <workItem from="1446370374441" duration="519000" />
-      <workItem from="1446370936469" duration="72429000" />
+      <workItem from="1446370936469" duration="73345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98694000" />
+    <option name="totallyTimeSpent" value="99610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="6" />
@@ -1081,40 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/smartPhone.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.458334">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/desktopPc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.458334">
-          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/tabletPc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-71.25">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/sakura.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="147" column="47" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
-          <folding>
-            <marker date="1447421360000" expanded="true" signature="2521:2581" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/circleplayer-master/js/mod.csstransforms.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1206,9 +1199,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/telephone.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39531478">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/smartPhone.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.458334">
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/tabletPc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/desktopPc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sakura.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5152439">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <folding>
+            <marker date="1447425679000" expanded="true" signature="2520:2580" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

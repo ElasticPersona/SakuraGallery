@@ -20,7 +20,6 @@
 <link rel="stylesheet" type="text/css" href="/css/tabletPc.css" type="text/css" media="only screen and (min-width: 415px) and (max-width: 910px)" >
 <link rel="stylesheet" type="text/css" href="/css/desktopPc.css" media="only screen and (min-width: 911px)" >
 
-
 <!-- フォント -->
 <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 
@@ -46,6 +45,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
+/*
             // 画面幅を取得
             var screenWidth = $(window).width();
             // 分岐する画面幅
@@ -62,11 +62,12 @@
                 });
             } else {
                 $('video').hide();
+*/
                 $('#fullpage').fullpage({
                     verticalCentered: true,
                     sectionsColor: ['white', 'white', '', ''],
                 });
-            }
+//            }
 
             $('.tlt').textillate({
                 // the default selector to use when detecting multiple texts to animate
@@ -229,9 +230,9 @@
                 <h3>Sakura Official Blogs</h3>
             </a>
             <p></p>
-            <h3 class="tlt lightBlue">This is SAKURA day!</h3>
-            <h3 class="tlt lightBlue">Have fun with Me!</h3>
-            <h4 class="tlt lightBlue">Shuhei.</h4>
+            <h3 class="tlt lightPink">This is SAKURA day!</h3>
+            <h3 class="tlt lightPink">Have fun with Me!</h3>
+            <h4 class="tlt lightPink">Shuhei.</h4>
         </section>
     </div>
 </div>
@@ -255,26 +256,6 @@
             //console.log(item)
         }
     } );
-
-
-    // お誕生日おめでとうエフェクト
-    // wrap each title letter
-    // $("#start h1").wrapEach(/(.)/g, "<span>$1</span>");
-
-    // animations
-    var controller;
-    controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            triggerHook: "onLeave"
-        }
-    });
-
-    // jumping text
-    new ScrollMagic.Scene({
-        duration: 200,
-        offset: 450
-    })
-        .addTo(controller);
 </script>
 
 </body>
