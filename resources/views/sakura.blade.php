@@ -136,6 +136,9 @@
         #slide2, #slide3, #slide4 {
             background-color: hotpink;
         }
+        .age {
+            color: red;
+        }
     </style>
 
 </head>
@@ -147,7 +150,7 @@
             <source src="../movies/sakuraHappyWedding.mp4" type="video/mp4">
         </video>
         <div class="layer">
-            <h1 class="lightPink tlt">新木さくらさん19歳のお誕生日おめでとう！</h1>
+            <h1 class="lightPink tlt">新木さくらさん<span class="age">19</span>歳のお誕生日おめでとう！</h1>
         </div>
     </div>
     <div class="section" id="section1">
@@ -161,10 +164,10 @@
                     <?php for($i = 1; $i <= 8; $i++) {?>
                         <figure>
                             <a class="photostack-img">
-                                <img class="polaroidImage" src="../img/0<?php echo $i ?>.jpg" alt=""/>
+                                <img class="polaroidImage" src="https://s3-ap-northeast-1.amazonaws.com/sakuraimages/iPhone/0<?php echo $i ?>.jpg" alt=""/>
                             </a>
                             <figcaption>
-                                <h2 class="photostack-title">SakuraDays<?php echo $i ?></h2>
+                                <h2 class="photostack-title"></h2>
                             </figcaption>
                         </figure>
                     <?php } ?>
