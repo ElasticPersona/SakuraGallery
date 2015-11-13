@@ -90,6 +90,13 @@ h1{
             0 0 20px hotpink,
             0 0 0.40px hotpink;
 }
+.lightBlue {
+    font-family: 'Playball', cursive;
+    text-shadow:
+            0 0 25px deepskyblue,
+            0 0 20px deepskyblue,
+            0 0 0.40px deepskyblue;
+}
 /* Polaroid裏面テキスト */
 .polaroidText {
     font-size: 8px;

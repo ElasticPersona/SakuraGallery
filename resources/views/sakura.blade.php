@@ -28,14 +28,7 @@
 <script type="text/javascript" src="/js/polaroid-modernizr.min.js"></script>
 <script type="text/javascript" src="/js/polaroid-photostack.js"></script>
 <script type="text/javascript" src="/js/polaroid-classie.js"></script>
-<script type="text/javascript" src="/js/ScrollMagic.min.js"></script>
-<script type="text/javascript" src="/js/lib/greensock/TweenMax.min.js"></script>
-<script type="text/javascript" src="/js/lib/greensock/TimelineMax.min.js"></script>
-<script type="text/javascript" src="/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
-<script type="text/javascript" src="/js/plugins/animation.gsap.min.js"></script>
-<script type="text/javascript" src="/js/plugins/debug.addIndicators.min.js"></script>
 <script type="text/javascript" src="/js/demo.js"></script>
-<script type="text/javascript" src="/js/soundmanager2-jsmin.js"></script>
 <script type="text/javascript" src="/js/jquery.textillate.js"></script>
 <script type="text/javascript" src="/js/jquery.lettering.js"></script>
 <script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
@@ -233,6 +226,10 @@
                 <img src="" />
                 <h3>Sakura Official Blogs</h3>
             </a>
+            <p></p>
+            <h3 class="tlt lightBlue">This is SAKURA day!</h3>
+            <h3 class="tlt lightBlue">Have fun with Me!</h3>
+            <h4 class="tlt lightBlue">Shuhei.</h4>
         </section>
     </div>
 </div>

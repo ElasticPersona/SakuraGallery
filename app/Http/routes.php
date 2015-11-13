@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 
+// Sakuraコントローラをルートで登録
+Route::get('/specialday/', 'sakuraController@show');
+
 // Polaroidコントローラをルートで登録
 Route::get('/polaroid/{accountId}', 'PolaroidController@show');
 
