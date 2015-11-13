@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>{{ $userInfo['name'] }} Gallery</title>
+<title>さくらさん19歳のお誕生日おめでと</title>
 <meta name="description" content="Sakura Araki Happy 19th Birthday." />
 <meta name="keywords" content="Sakura Araki, Sakura, Araki, LinQ, 新木さくら, さくら, 新木" />
 <meta name="author" content="Shuhei" />
@@ -139,11 +139,13 @@
 
 <div id="fullpage">
     <div class="section sakuraFirst" id="section0">
+        <!--
         <video autoplay loop muted id="myVideo" style="visibility:hidden">
             <source src="../movies/sakuraHappyWedding.mp4" type="video/mp4">
         </video>
+        -->
         <div class="layer">
-            <h1 class="lightPink tlt">新木さくらさん<span class="age">19</span>歳のお誕生日おめでとう！</h1>
+            <h1 class="lightPink tlt">新木さくらさん19歳のお誕生日おめでとう！</h1>
         </div>
     </div>
     <div class="section" id="section1">

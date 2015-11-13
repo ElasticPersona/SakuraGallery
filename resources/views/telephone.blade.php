@@ -24,9 +24,9 @@
 </head>
 
 <body>
-<audio src="/mp3/LinQ-telephone.mp3" autoplay loop></audio>
 
 <div id="container" class="scrollocueView">
+    <audio src="/mp3/LinQ-telephone.mp3" autoplay></audio>
 
     <h1 class="name">Telephone</h1>
 
