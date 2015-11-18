@@ -23,108 +23,6 @@
 <!-- フォント -->
 <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="/js/polaroid-modernizr.min.js"></script>
-<script type="text/javascript" src="/js/polaroid-photostack.js"></script>
-<script type="text/javascript" src="/js/polaroid-classie.js"></script>
-<script type="text/javascript" src="/js/demo.js"></script>
-<script type="text/javascript" src="/js/jquery.textillate.js"></script>
-<script type="text/javascript" src="/js/jquery.lettering.js"></script>
-<script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
-<script type="text/javascript" src="/js/jquery.easings.min.js"></script>
-<script type="text/javascript" src="/js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="/js/examples.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-
-    <!--[if IE]>
-    <script type="text/javascript">
-        var console = { log: function() {} };
-    </script>
-    <![endif]-->
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-/*
-            // 画面幅を取得
-            var screenWidth = $(window).width();
-            // 分岐する画面幅
-            var xWidth = 911;
-            if (xWidth <= screenWidth) {
-                $('video').show();
-                $('#fullpage').fullpage({
-                    verticalCentered: true,
-                    sectionsColor: ['white', 'white', '', ''],
-                    afterRender: function () {
-                        //playing the video
-                        $('video').get(0).play();
-                    }
-                });
-            } else {
-                $('video').hide();
-*/
-                $('#fullpage').fullpage({
-                    verticalCentered: true,
-                    sectionsColor: ['white', 'white', '', ''],
-                });
-//            }
-
-            $('.tlt').textillate({
-                // the default selector to use when detecting multiple texts to animate
-                selector: '.texts',
-
-                // enable looping
-                loop: true,
-
-                // sets the minimum display time for each text before it is replaced
-                minDisplayTime: 2000,
-
-                // sets the initial delay before starting the animation
-                // (note that depending on the in effect you may need to manually apply
-                // visibility: hidden to the element before running this plugin)
-                initialDelay: 0,
-
-                // set whether or not to automatically start animating
-                autoStart: true,
-
-                // custom set of 'in' effects. This effects whether or not the
-                // character is shown/hidden before or after an animation
-                inEffects: [],
-
-                // custom set of 'out' effects
-                outEffects: [ 'hinge' ],
-
-                // in animation settings
-                in: {
-                    // set the effect name
-                    effect: 'fadeInLeftBig',
-                    delayScale: 1.5,
-                    delay: 50,
-                    sync: false,
-                    shuffle: false,
-                    reverse: false,
-                    callback: function () {}
-                },
-
-                // out animation settings.
-                out: {
-                    effect: 'fadeOutRight',
-                    delayScale: 1.5,
-                    delay: 50,
-                    sync: false,
-                    shuffle: false,
-                    reverse: false,
-                    callback: function () {}
-                },
-
-                // callback that executes once textillate has finished
-                callback: function () {},
-
-                // set the type of token to animate (available types: 'char' and 'word')
-                type: 'char'
-            });
-        });
-    </script>
 
     <style>
         #slide2, #slide3, #slide4 {
@@ -226,6 +124,18 @@
 </div>
 
 
+<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/polaroid-modernizr.min.js"></script>
+<script type="text/javascript" src="/js/polaroid-photostack.js"></script>
+<script type="text/javascript" src="/js/polaroid-classie.js"></script>
+<script type="text/javascript" src="/js/demo.js"></script>
+<script type="text/javascript" src="/js/jquery.textillate.js"></script>
+<script type="text/javascript" src="/js/jquery.lettering.js"></script>
+<script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easings.min.js"></script>
+<script type="text/javascript" src="/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="/js/examples.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script>
     // [].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
 
@@ -244,7 +154,87 @@
             //console.log(item)
         }
     } );
-</script>
 
+    $(document).ready(function() {
+        /*
+         // 画面幅を取得
+         var screenWidth = $(window).width();
+         // 分岐する画面幅
+         var xWidth = 911;
+         if (xWidth <= screenWidth) {
+         $('video').show();
+         $('#fullpage').fullpage({
+         verticalCentered: true,
+         sectionsColor: ['white', 'white', '', ''],
+         afterRender: function () {
+         //playing the video
+         $('video').get(0).play();
+         }
+         });
+         } else {
+         $('video').hide();
+         */
+        $('#fullpage').fullpage({
+            verticalCentered: true,
+            sectionsColor: ['white', 'white', '', ''],
+        });
+//            }
+
+        $('.tlt').textillate({
+            // the default selector to use when detecting multiple texts to animate
+            selector: '.texts',
+
+            // enable looping
+            loop: true,
+
+            // sets the minimum display time for each text before it is replaced
+            minDisplayTime: 2000,
+
+            // sets the initial delay before starting the animation
+            // (note that depending on the in effect you may need to manually apply
+            // visibility: hidden to the element before running this plugin)
+            initialDelay: 0,
+
+            // set whether or not to automatically start animating
+            autoStart: true,
+
+            // custom set of 'in' effects. This effects whether or not the
+            // character is shown/hidden before or after an animation
+            inEffects: [],
+
+            // custom set of 'out' effects
+            outEffects: [ 'hinge' ],
+
+            // in animation settings
+            in: {
+                // set the effect name
+                effect: 'fadeInLeftBig',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+                callback: function () {}
+            },
+
+            // out animation settings.
+            out: {
+                effect: 'fadeOutRight',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+                callback: function () {}
+            },
+
+            // callback that executes once textillate has finished
+            callback: function () {},
+
+            // set the type of token to animate (available types: 'char' and 'word')
+            type: 'char'
+        });
+    });
+</script>
 </body>
 </html>
